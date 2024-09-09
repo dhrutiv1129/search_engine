@@ -1,6 +1,5 @@
 """
 Dhruti Vadlamudi
-Intermediate Data Programming
 """
 from cse163_utils import normalize_token
 
