@@ -1,6 +1,5 @@
 """
 Dhruti Vadlamudi
-Intermediate Data Programming
 """
 import os
 from document import Document
