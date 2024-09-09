@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "hw5_test.py", line 98, in <module>
+    test_search()
+  File "hw5_test.py", line 17, in test_search
+    e2 = SearchEngine('my_test_corpus')
+  File "C:\Users\jstride\Documents\IDP 2023-24\Students\HW5\1120875\search_engine.py", line 29, in __init__
+    self._dir = os.listdir(relative_path)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'my_test_corpus'

@@ -1,0 +1,99 @@
+...F.....................FE
+======================================================================
+ERROR: test_multiple_searches_and_speed (test_search_engine_perf.TestPerformance)
+#name([Behavior: Speed Case] Testing how long it takes to do searches)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\jstride\Documents\IDP 2023-24\Students\HW5\1120875\test\test_search_engine_perf.py", line 29, in test_multiple_searches_and_speed
+    func_timeout(3, create_engine)
+  File "C:\Users\jstride\.conda\envs\cse163\lib\site-packages\func_timeout\dafunc.py", line 101, in func_timeout
+    raise FunctionTimedOut('', timeout, func, args, kwargs)
+func_timeout.exceptions.FunctionTimedOut: Function create_engine (args=()) (kwargs={}) timed out after 3.000000 seconds.
+
+
+======================================================================
+FAIL: test_p0_get_words_unique (test_document.TestPart0)
+#name([Behavior: Common Case] Testing document get_words with repeats)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\jstride\Documents\IDP 2023-24\Students\HW5\1120875\test\test_document.py", line 64, in test_p0_get_words_unique
+    self.assertEqual(sol, ans, msg)
+AssertionError: Lists differ: ['corgis', 'dogs', 'i', 'like', 'like', 'that'] != ['corgis', 'dogs', 'i', 'like', 'that']
+
+First differing element 4:
+'like'
+'that'
+
+First list contains 1 additional elements.
+First extra element 5:
+'that'
+
+- ['corgis', 'dogs', 'i', 'like', 'like', 'that']
+?                                 --------
+
++ ['corgis', 'dogs', 'i', 'like', 'that'] : Testing get_words on document with repeats
+
+======================================================================
+FAIL: test_p2_search_query_repeat_terms (test_search_engine.TestPart1)
+#name([Behavior: Edge Case] SE14: Search_engine where query has repeated terms)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\jstride\Documents\IDP 2023-24\Students\HW5\1120875\test\test_search_engine.py", line 188, in test_p2_search_query_repeat_terms
+    self.assertEqual(sol, ans, msg)
+AssertionError: Lists differ: ['instructor/document3.txt', 'instructor/document2.txt', 'inst[17 chars]txt'] != ['instructor/document2.txt', 'instructor/document3.txt', 'inst[17 chars]txt']
+
+First differing element 0:
+'instructor/document3.txt'
+'instructor/document2.txt'
+
+- ['instructor/document3.txt',
+?                      ^
+
++ ['instructor/document2.txt',
+?                      ^
+
+-  'instructor/document2.txt',
+?                      ^
+
++  'instructor/document3.txt',
+?                      ^
+
+   'instructor/document1.txt'] : Testing search_engine search where query has repeated terms
+
+----------------------------------------------------------------------
+Ran 27 tests in 4.123s
+
+FAILED (failures=2, errors=1)
+[Behavior: Common Case] Testing document term_frequency on all words
+[Behavior: Common Case] D5: Testing term_frequency on all words in long file
+[Behavior: Common Case] Testing document get_words on example document
+[Behavior: Common Case] Testing document get_words with repeats
+[Behavior: Common Case] Testing document term_frequency of 'corgis' on document1
+[Behavior: Edge Case] D3: Testing document term_frequency on long file, ignore cases and punctuation
+[Behavior: Edge Case] D1: Testing document term_frequency, returns zero
+[Behavior: Edge Case] D2: Testing document term_frequency on long file, returns zero
+[Behavior: Common Case] Document class should implement term_frequency function
+[Behavior: Common Case] SearchEngine class should implement search function
+[Code Quality] Contains all comments
+[Quality] Files pass flake8
+[Misc] Testing for submitted files
+[Behavior: Common Case] SE11: Search_engine multi word, avoid doc dupes, order matters
+[Behavior: Common Case] SE5: Search_engine single word search on directory from spec, order matters
+[Behavior: Common Case] SE4: Search_engine single word search on instructor directory, order matters
+[Behavior: Common Case] Testing search_engine single word search on directory from spec, ignores order
+[Behavior: Common Case] SE3: Search_engine single word search on instructor directory, ignores order
+[Behavior: Edge Case] SE12: Search_engine where doc has three words
+[Behavior: Edge Case] SE6: Search_engine multi word search on directory from spec, returns empty list
+[Behavior: Edge Case] SE10: Search_engine multi word search with first term missing
+[Behavior: Common Case] Search_engine multi word search on directory from spec, ignores order
+[Behavior: Common Case] SE9: Search_engine multi word search on instructor directory, order matters, mixed case and punctuation
+[Behavior: Common Case] SE8: Search_engine multi word
+[Behavior: Common Case] SE7: Testing search_engine multi word search on instructor directory
+[Behavior: Edge Case] SE14: Search_engine where query has repeated terms
+[Behavior: Speed Case] Testing how long it takes to do searches
+Ran 27 tests, PASSED=24 Failed=2, Errors=1
+Summary of Failures and Errors:
+  Failed: [Behavior: Common Case] Testing document get_words with repeats
+  Failed: [Behavior: Edge Case] SE14: Search_engine where query has repeated terms
+  ERROR: [Behavior: Speed Case] Testing how long it takes to do searches
+Finished running all tests. Success: False
